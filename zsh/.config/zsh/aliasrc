@@ -5,5 +5,17 @@
 #
 # Author: Zach Bedewi
 
-# ls alias
-alias ls="ls --color --almost-all --group-directories-first -lhX"
+# Use neovim instead of vim, when possible
+command -v nvim >/dev/null && alias vim="nvim"
+
+# Verbosity settings
+alias \
+        cp="cp -iv" \
+        mv="mv -iv" \
+        mkdir="mkdir -iv"
+
+# Colorization and formatting
+alias \
+        ls="ls -lhX --color --almost-all --group-directories-first" \
+        grep="grep --color=auto"
+        diff="diff --color=auto"

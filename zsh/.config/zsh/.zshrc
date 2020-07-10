@@ -12,3 +12,7 @@ HISTFILE="$XDG_CACHE_HOME/zsh/history"
 
 # Load the alias file, if it exists
 [ -f "$XDG_CONFIG_HOME/zsh/aliasrc" ] && source "$XDG_CONFIG_HOME/zsh/aliasrc"
+
+# Set vi mode keybinds for command line editing
+bindkey -v
+export KEYTIMEOUT=1
