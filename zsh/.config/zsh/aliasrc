@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# This file contains different, commonly used and helpful aliases. It is sourced
+# in the .zshrc file.
+#
+# Author: Zach Bedewi
+
+# ls alias
+alias ls="ls --color --almost-all --group-directories-first -lhX"

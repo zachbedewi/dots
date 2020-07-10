@@ -5,6 +5,10 @@
 #
 # Author: Zach Bedewi
 
+# Adds the 'gnubin' directory to the PATH so that the gnu coreutils will be
+# prioritized over macOS utilities
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
 # Set the default programs
 export EDITOR="/usr/local/bin/nvim"
 export TERMINAL="/usr/local/bin/kitty"
