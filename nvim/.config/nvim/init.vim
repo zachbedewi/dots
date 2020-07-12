@@ -6,3 +6,7 @@
 " Source all the necessary files
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
+
+let base16colorspace=256
+set termguicolors
+colorscheme base16-dracula
