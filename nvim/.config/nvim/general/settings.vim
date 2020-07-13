@@ -27,7 +27,7 @@ set laststatus=0            " Always display the status line
 set number                  " Show line numbers
 set cursorline              " Enable highlighting of the current line
 set background=dark         " Tell vim what the background color looks like
-set showtabline=2           " Always show tabs
+"set showtabline=2           " Always show tabs
 set noshowmode              " Don't need to see the mode that we are in
 set nobackup                " Recommended by coc.nvim
 set nowritebackup           " Recommended by coc.nvim
