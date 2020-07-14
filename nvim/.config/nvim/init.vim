@@ -7,8 +7,9 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/general/mappings.vim
+source $HOME/.config/nvim/general/functions.vim
 
 " Source all of the files pertaining to plugin configuration
 source $HOME/.config/nvim/vim-plug/base16.vim
-
-set cc=80
+source $HOME/.config/nvim/vim-plug/vim-airline.vim
+source $HOME/.config/nvim/vim-plug/coc.vim

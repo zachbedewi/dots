@@ -15,3 +15,6 @@ inoremap kj <Esc>
 
 " Save with CTRL-s
 nnoremap <C-s> :w<CR>
+
+" Call the ToggleCC() function in order to set or get rid of column marker
+nnoremap <Leader>cc :call ToggleCC()<CR>
