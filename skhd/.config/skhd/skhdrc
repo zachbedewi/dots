@@ -1,0 +1,49 @@
+# This file contains different keymaps that are used. The keymaps in this file
+# are primarily used for managing yabai.
+#
+# Author: Zach Bedewi
+
+# Open Kitty terminal
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+cmd + shift - b : open -na /Applications/Brave\ Browser.app
+
+# Change focused window
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# Swap focused window
+ctrl + alt - h : yabai -m window --swap west
+ctrl + alt - j : yabai -m window --swap south
+ctrl + alt - k : yabai -m window --swap north
+ctrl + alt - l : yabai -m window --swap east
+
+# Balance the windows
+alt - e : yabai -m space --balance
+
+# Warp focused window
+cmd + alt - h : yabai -m window --warp west
+cmd + alt - j : yabai -m window --warp south
+cmd + alt - k : yabai -m window --warp north
+cmd + alt - l : yabai -m window --warp east
+
+# Toggle gaps and padding
+alt - g : yabai -m space --toggle gap
+alt - p : yabai -m space --toggle padding
+
+# Increase the gap/padding size
+ctrl + alt - g : yabai -m space --gap rel:5
+ctrl + alt - p : yabai -m space --padding rel:5:5:5:5
+
+# Decrease the gap/padding size
+cmd + alt - g : yabai -m space --gap rel:-5
+cmd + alt - p : yabai -m space -- padding rel:-5:-5:-5:-5
+
+# Reset the gap/padding size to original
+cmd + ctrl + alt - g : yabai -m space --gap abs:10
+cmd + ctrl + alt - p : yabai -m space --padding abs:10:10:10:10
+
+# Change the space layout
+alt - b : yabai -m space --layout bsp
+alt - f : yabai -m space --layout float

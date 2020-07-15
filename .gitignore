@@ -1,1 +1,9 @@
+# Useful gitignore file that stops git from tracking unwanted files and folders
+# that would add unneccessary bloat to the configuration.
+
+# This directory stores all of the plugins installed by vim-plug, which we do
+# not want to track
 nvim/.config/nvim/autoload/plugged/**
+
+# These files are used to store folder configuration data on MacOS
+.DS_Store

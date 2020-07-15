@@ -12,7 +12,6 @@ command -v nvim >/dev/null && alias vim="nvim"
 alias \
         cp="cp -iv" \
         mv="mv -iv" \
-        mkdir="mkdir -iv"
 
 # Colorization and formatting
 alias \
