@@ -1,4 +1,5 @@
-" Plugin management in vim using vim-plug
+" Plugin management in vim using vim-plug. This file is used to install all of
+" the plugins used in this neovim configuration.
 "
 " Author: Zach Bedewi
 
@@ -13,14 +14,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Base16 colorschemes
 Plug 'chriskempson/base16-vim'
 
-" Nice statusline
+" Easily configurable statusline that integrates with many other plugins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Easy matching delimiters
 Plug 'jiangmiao/auto-pairs'
 
-" Autocomplete
+" Code completion/intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" C++ semantic highlighting
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 call plug#end()

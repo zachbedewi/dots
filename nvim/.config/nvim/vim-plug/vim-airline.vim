@@ -1,4 +1,4 @@
-" Configuration file for vim-airline
+" Configuration file for vim-airline.
 "
 " Author: Zach Bedewi
 

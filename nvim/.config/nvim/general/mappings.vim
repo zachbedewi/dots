@@ -1,13 +1,7 @@
-" This file contains all of the mappings the are use in this neovim
-" configuration
+" This file contains all of the mappings the are used in this neovim
+" configuration.
 "
 " Author: Zach Bedewi
-
-" Use ALT-hjkl to resize windows
-nnoremap <M-j>    :resize -2<CR>
-nnoremap <M-k>    :resize +2<CR>
-nnoremap <M-h>    :vertical resize -2<CR>
-nnoremap <M-l>    :vertical resize +2<CR>
 
 " Use jk or kj to ESC
 inoremap jk <Esc>
@@ -16,5 +10,5 @@ inoremap kj <Esc>
 " Save with CTRL-s
 nnoremap <C-s> :w<CR>
 
-" Call the ToggleCC() function in order to set or get rid of column marker
+" Call the ToggleCC() function in order to show or hide a column marker
 nnoremap <Leader>cc :call ToggleCC()<CR>

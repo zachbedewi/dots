@@ -1,4 +1,5 @@
-# Zach's configuration file for zsh
+# Primary zsh configuration file. This file sets the prompt and handles all 
+# other major settings
 #
 # Author: Zach Bedewi
 

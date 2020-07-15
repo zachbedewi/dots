@@ -1,8 +1,8 @@
-" General settings that are useful for neovim
+" General settings that are useful for neovim.
 "
 " Author: Zach Bedewi
 
-" Set the leader key
+" Set the mapleader key to be a space
 let g:mapleader= " "
 
 syntax enable               " Enables syntax highlighting

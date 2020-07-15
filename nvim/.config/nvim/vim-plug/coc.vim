@@ -1,4 +1,4 @@
-" Configuration file for coc.nvim
+" Configuration file for coc.nvim.
 "
 " Author: Zach Bedewi
 
