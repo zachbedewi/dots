@@ -11,6 +11,7 @@
 
     # Use colors in Git commands when possible
     ui = auto
+
 [user]
 	name = Zach Bedewi
 	email = zachary.bedewi@gmail.com

@@ -1,6 +1,5 @@
 # This brewfile installs all of the dependencies required for this dotfile
-# configuration. It also installs many useful utilities that are essentially
-# necessary.
+# configuration. It also installs many useful utilities.
 #
 # Author: Zach Bedewi
 
@@ -10,13 +9,18 @@ tap "homebrew/core"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 
-# Packages
+# Necessary Dependencies
 brew "zsh"
+brew "coreutils"
 brew "neovim"
 brew "koekeishiya/formulae/yabai"
 brew "koekeishiya/formulae/skhd"
 brew "tmux"
-brew "coreutils"
+brew "stow"
+
+# Other useful packages
+brew "htop"
+brew "neofetch"
 brew "findutils"
 brew "gnu-sed"
 brew "wget"
@@ -24,10 +28,9 @@ brew "tree"
 brew "grep"
 brew "ack"
 brew "imagemagick"
-brew "python3"
+brew "python"
 brew "node"
 brew "mas"
-brew "stow"
 
 # Casks
 cask "kitty"

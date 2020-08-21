@@ -2,35 +2,54 @@
 
 ![Screenshot of shell prompt](assets/shellprompt.png)
 
+**NOTE**: These dotfiles are used for my personal machine running MacOS, and as 
+a result they may contain settings and configurations that you won't like. Prior 
+to installation, look through this repository and see what settings you might 
+like to change.
+
+## Prerequisites
+You must have [Homebrew](https://brew.sh/) in order to fully complete 
+installation. Install homebrew:
+
+```console
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+If you wish to clone this repository with git:
+
+```console
+brew install git
+```
+
 ## Installation
-** NOTE ** : Before installing these dotfiles, look through this repository and 
-keep in mind that these dotfiles are used on a macOS system and may not work 
-properly on a Linux on Windows system.
+Clone this repository into any directory on your machine:
 
-# Cloning the Repository
-This repository can be cloned in any directory on your machine.
-
-```bash
+```console
 git clone https://github.com/zachbedewi/dots.git
 ```
 
-### Installing Dependencies
-To install of the dependencies that are used in this dotfile configuration
-(along with some other useful programs), use the command
+Install dependencies (along with other useful packages and apps):
 
-```bash
+```console
 brew bundle
 ```
 
-### Using GNU Stow
 These dotfiles are deployed using [GNU Stow](https://www.gnu.org/software/stow/), 
-which allows each "package" to be installed separately. For example, in order to
-install the zsh package, enter this command while in the dots directory
+which allows each package to be installed separately. To install a package (zsh
+for example), run the following command:
 
-```bash
+```console
 stow -t ~ zsh
 ```
 
-This command will create a symlink between the zsh configuration files in the
-dots repo and in the corresponding configuration folder specified by the XDG
-Base Directory.
+In order to install other packages, use the above command replacing `zsh` with 
+the desired package name. (**Note**: the name of each package is the name of the 
+top level directory in the dots folder).
+
+## Inspiration
+
+* Mathias Bynen's [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
+* Elenapan's [dotfiles repository](https://github.com/elenapan/dotfiles)
+* Luke Smith's [dotfiles repository](https://github.com/LukeSmithxyz/voidrice)
+* Christian Chiarulli's [neovim repository](https://github.com/ChristianChiarulli/nvim)
+* [r/unixporn](https://www.reddit.com/r/unixporn/)
