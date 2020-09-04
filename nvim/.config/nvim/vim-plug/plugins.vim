@@ -14,6 +14,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 " Base16 colorschemes
 Plug 'chriskempson/base16-vim'
 
+" Nord colorscheme
+Plug 'arcticicestudio/nord-vim'
+
 " Easily configurable statusline that integrates with many other plugins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

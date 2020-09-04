@@ -8,9 +8,11 @@ tap "homebrew/bundle"
 tap "homebrew/core"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "koekeishiya/formulae"
 
 # Necessary Dependencies
 brew "zsh"
+brew "starship"
 brew "coreutils"
 brew "neovim"
 brew "koekeishiya/formulae/yabai"
