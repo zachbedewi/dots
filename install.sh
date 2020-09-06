@@ -1,0 +1,77 @@
+#!/bin/bash
+#
+# This script will install all of the dotfiles and default settings for a macOS
+# machine.
+#
+# Author: Zach Bedewi
+
+# Get the name of the directory that this file is being executed in
+DOTFILE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+###############################################################################
+# Install of the packages to the home directory using GNU Stow.
+# Globals:
+#   DOTFILE_DIR
+# Arguments:
+#   List of packages that are not to be installed
+###############################################################################
+function stow_packages () {
+    ignore_pkg=false
+
+    for pkg in ${DOTFILE_DIR}/*; do
+        if [[ -d "$pkg" ]]; then
+            # Check if the package is on the ignore list, and set a flag if so
+            for ignore in "$@"; do
+                if [[ "$pkg" == "${DOTFILE_DIR}/${ignore}" ]]; then
+                    ignore_pkg=true
+                    break
+                fi
+            done
+
+            # Install the package if it is not on the ignore list
+            if [[ "$ignore_pkg" = false ]]; then
+                stow -v 1 -t ~ "$(basename -- $pkg)"
+            fi
+
+            ignore_pkg=false
+        fi
+    done
+}
+
+###############################################################################
+# Asks the user if they would like to change the default macOS settings. If yes,
+# the macos_settings.sh file will be sourced.
+# Outputs:
+#   Outputs to STDOUT
+###############################################################################
+function change_default_settings () {
+    read -p "Would you like to change macOS default dock/finder settings (y/n): " ans
+
+    if [[ "$ans" == "y" ]]; then
+        source ./macos_settings.sh
+    fi
+}
+
+###############################################################################
+# Asks the user if they would like to install dependcies, utilites, and
+# applications. If yes, the Brewfile will be sourced.
+# Outputs:
+#   Outputs to STDOUT
+###############################################################################
+function install_deps () {
+    read -p "Would you like to install dependcies, utilities, and apps (y/n): " ans
+
+    if [[ "$ans" == "y" ]]; then
+        brew bundle
+    fi
+}
+
+# Go through the installation process
+
+change_default_settings
+
+install_deps
+
+read -p "Package ignore list: " ignore_list
+
+stow_packages assets $ignore_list

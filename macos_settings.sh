@@ -64,12 +64,4 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 echo "Finished updating the finder settings ..."
 
-# Input Devices
-
-echo "Updating input device settings ..."
-
-# Disable auto-correct
-defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
-
-echo "Finished updating input device settings ..."
 echo "Finished updating the default settings."
