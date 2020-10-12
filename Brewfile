@@ -21,8 +21,6 @@ brew "tmux"
 brew "stow"
 
 # Other useful packages
-brew "htop"
-brew "neofetch"
 brew "findutils"
 brew "gnu-sed"
 brew "wget"

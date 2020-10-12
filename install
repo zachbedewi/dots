@@ -1,9 +1,15 @@
 #!/bin/bash
 #
+# install
+#
 # This script will install all of the dotfiles and default settings for a macOS
 # machine.
 #
 # Author: Zach Bedewi
+
+# Stop on errors, print commands
+set -Eeuo pipefail
+set -x
 
 # Get the name of the directory that this file is being executed in
 DOTFILE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
@@ -45,10 +51,11 @@ function stow_packages () {
 #   Outputs to STDOUT
 ###############################################################################
 function change_default_settings () {
-    read -p "Would you like to change macOS default dock/finder settings (y/n): " ans
+    read -p "Would you like to change macOS default dock/finder settings 
+             (y/n): " ans
 
     if [[ "$ans" == "y" ]]; then
-        source ./macos_settings.sh
+        ./macos_settings.sh
     fi
 }
 
@@ -59,7 +66,8 @@ function change_default_settings () {
 #   Outputs to STDOUT
 ###############################################################################
 function install_deps () {
-    read -p "Would you like to install dependcies, utilities, and apps (y/n): " ans
+    read -p "Would you like to install dependcies, utilities, and apps 
+             (y/n): " ans
 
     if [[ "$ans" == "y" ]]; then
         brew bundle

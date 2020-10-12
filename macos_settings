@@ -1,6 +1,14 @@
 #!/bin/bash
 #
-# macos_settings.sh
+# macos_settings
+#
+# Change some of the macos default settings to be more reasonable
+# 
+# Author: Zach Bedewi
+
+# Stop on errors, print commands
+set -Eeuo pipefail
+set -x
 
 # Dock Settings
 echo "Updating the dock settings ..."

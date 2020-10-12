@@ -10,8 +10,8 @@
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Set the default programs
-export EDITOR="/usr/local/bin/nvim"
-export TERMINAL="/usr/local/bin/kitty"
+export EDITOR="nvim"
+export TERMINAL="kitty"
 
 # Set the variables that will be used to follow the XDG base directory 
 # specification
@@ -20,4 +20,4 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # Use the XDG base directory specification when applicable
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"

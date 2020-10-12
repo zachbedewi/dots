@@ -9,10 +9,10 @@ eval "$(starship init zsh)"
 # Save zsh history in the cache directory (specified by XDG base directory)
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE="$XDG_CACHE_HOME/zsh/history"
+HISTFILE=~/.cache/zsh/history
 
 # Load the alias file, if it exists
-[ -f "$XDG_CONFIG_HOME/zsh/aliasrc" ] && source "$XDG_CONFIG_HOME/zsh/aliasrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliasrc"
 
 # Set vi mode keybinds for command line editing
 bindkey -v
