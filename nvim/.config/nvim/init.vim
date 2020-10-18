@@ -3,13 +3,23 @@
 "
 " Author: Zach Bedewi
 
-" General neovim configuration files
-source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/general/mappings.vim
-source $HOME/.config/nvim/general/functions.vim
+let nvim_config_dir = $XDG_CONFIG_HOME."/nvim/"
 
-" Plugin configuration files
-source $HOME/.config/nvim/vim-plug/plugins.vim
-source $HOME/.config/nvim/vim-plug/base16.vim
-source $HOME/.config/nvim/vim-plug/vim-airline.vim
-source $HOME/.config/nvim/vim-plug/coc.vim
+exec 'source' nvim_config_dir.'vim-plug/plugins.vim'
+
+let dirList = split(globpath(nvim_config_dir, '*'), '\n')
+
+for dir in dirList
+    if isdirectory(dir)
+        if dir != nvim_config_dir."autoload"
+            let file_list = split(globpath(dir, '*'), '\n')
+            for filename in file_list
+                exec 'source' filename
+            endfor
+        endif
+    endif
+endfor
+
+" Colorscheme
+set termguicolors
+colorscheme dracula

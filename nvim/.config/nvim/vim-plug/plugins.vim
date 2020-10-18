@@ -10,24 +10,36 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
-" Base16 colorschemes
-Plug 'chriskempson/base16-vim'
-
-" Nord colorscheme
+" --- Colorscheme Packages --- "
+" Dracula
+Plug 'dracula/vim', { 'as': 'dracula' }
+" Nord
 Plug 'arcticicestudio/nord-vim'
 
-" Easily configurable statusline that integrates with many other plugins
+" --- Git integration --- "
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+" --- Fuzzy Finder --- "
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" --- Vim Airline --- "
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Easy matching delimiters
-Plug 'jiangmiao/auto-pairs'
-
-" Code completion/intellisense
+" --- Code completion --- "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = [
+\ 'coc-python',
+\ 'coc-json',
+\ 'coc-sh',
+\ 'coc-explorer',
+\ 'coc-vimlsp'
+\ ]
 
-" C++ semantic highlighting
+" --- Misc. plugins --- "
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()

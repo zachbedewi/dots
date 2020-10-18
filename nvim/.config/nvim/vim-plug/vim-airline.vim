@@ -17,7 +17,7 @@ let g:airline_left_sep =            "\uE0B4"
 let g:airline_left_alt_sep =        "\uE0B5"
 let g:airline_right_sep =           "\uE0B6"
 let g:airline_right_alt_sep =       "\uE0B7"
-let g:airline_symbols.branch =      "\E0A0"
+let g:airline_symbols.branch =      "\uE0A0"
 let g:airline_symbols.readonly =    "\uE0A2"
 
 " Display the enhanced tabline which will show the open buffers as long as

@@ -1,5 +1,12 @@
 {
-    // coc-clangd settings
-    "clangd.path": "/Users/zach/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd",
-    "clangd.semanticHighlighting": true
+    // coc-explorer settings
+    "explorer.icon.enableNerdfont": true,
+    "explorer.width": 30,
+    "explorer.file.showHiddenFiles": true,
+    "explorer.keyMappings": {
+        "v": "open:vsplit"
+    },
+
+    // coc-python settings
+    "python.jediEnabled": false
 }

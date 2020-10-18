@@ -2,9 +2,6 @@
 "
 " Author: Zach Bedewi
 
-" Set the mapleader key to be a space
-let g:mapleader= " "
-
 syntax enable               " Enables syntax highlighting
 set hidden                  " Required to keep multiple buffers
 set nowrap                  " Display long lines as just one line
