@@ -8,5 +8,8 @@
     },
 
     // coc-python settings
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+
+    // coc-clangd settings
+    "clangd.path": "/usr/local/opt/llvm/bin/clangd"
 }

@@ -21,3 +21,4 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 # Use the XDG base directory specification when applicable
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export PYLINTHOME="${XDG_CACHE_HOME:-$HOME/.config}/pylint"

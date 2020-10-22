@@ -5,5 +5,7 @@
 # not want to track
 nvim/.config/nvim/autoload/plugged/**
 
+tmux/.config/tmux/plugins**
+
 # These files are used to store folder configuration data on MacOS
 .DS_Store

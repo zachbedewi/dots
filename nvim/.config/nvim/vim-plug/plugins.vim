@@ -31,11 +31,12 @@ Plug 'vim-airline/vim-airline-themes'
 " --- Code completion --- "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
+\ 'coc-explorer',
+\ 'coc-vimlsp',
+\ 'coc-sh',
 \ 'coc-python',
 \ 'coc-json',
-\ 'coc-sh',
-\ 'coc-explorer',
-\ 'coc-vimlsp'
+\ 'coc-clangd',
 \ ]
 
 " --- Misc. plugins --- "
