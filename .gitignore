@@ -3,7 +3,7 @@
 
 # This directory stores all of the plugins installed by vim-plug, which we do
 # not want to track
-nvim/.config/nvim/autoload/plugged/**
+nvim/.config/nvim/autoload/**
 
 tmux/.config/tmux/plugins**
 

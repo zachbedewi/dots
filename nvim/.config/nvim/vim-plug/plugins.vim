@@ -37,6 +37,8 @@ let g:coc_global_extensions = [
 \ 'coc-python',
 \ 'coc-json',
 \ 'coc-clangd',
+\ 'coc-texlab',
+\ 'coc-html',
 \ ]
 
 " --- Misc. plugins --- "
