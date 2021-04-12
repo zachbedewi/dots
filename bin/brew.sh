@@ -42,7 +42,6 @@ brew install dust
 brew install ripgrep
 brew install tokei
 brew install clementtsang/bottom/bottom
-brew install zoxide
 
 # Neovim
 brew install neovim
