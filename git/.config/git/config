@@ -1,10 +1,13 @@
 [alias]
     # View abbreviated SHA, description, and history graph of the latest 20 
     # commits
-    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
     # View the current working tree status using short format
-    s = status -s
+    s = status -sb
+
+    # Add a file while also looking at the changes to the file
+    a = add -p
 
 [color]
     # Use colors in Git commands when possible
