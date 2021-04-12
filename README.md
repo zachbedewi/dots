@@ -1,7 +1,5 @@
 # Zach's Dotfiles
 
-![Screenshot of shell prompt](assets/shellprompt.png)
-
 **NOTE**: These dotfiles are used for my personal machine running MacOS, and as 
 a result they may contain settings and configurations that you won't like. Prior 
 to installation, look through this repository and see what settings you might 
