@@ -1,20 +1,15 @@
-#!/bin/sh
-
-# This file contains different, commonly used and helpful aliases. It is sourced
-# in the .zshrc file.
+#!/usr/bin/env bash
 #
-# Author: Zach Bedewi
+# aliasrc
+#
+# Contains helpful aliases.
 
-# Use neovim instead of vim, when possible
-command -v nvim >/dev/null && alias vim="nvim"
+# Use neovim instead of vim if it is installed
+if command -v nvim &> /dev/null; then
+    alias vim="nvim"
+fi
 
-# Verbosity settings
-alias \
-        cp="cp -iv" \
-        mv="mv -iv" \
-
-# Colorization and formatting
-alias \
-        ls="ls -lhX --color --almost-all --group-directories-first" \
-        grep="grep --color=auto"
-        diff="diff --color=auto"
+# Use exa instead of ls if it is installed
+if command -v exa &> /dev/null; then
+    alias ls="exa --long --icons --all --group-directories-first --sort name --bytes --header"
+fi
