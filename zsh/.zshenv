@@ -2,6 +2,9 @@
 #
 # Sets environment variables.
 
+# Set default applications
+export EDITOR=nvim
+
 # XDG Base Directory Specification
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_DATA_DIRS="/usr/local/share:/usr/share"
