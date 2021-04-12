@@ -21,5 +21,7 @@ fi
 bindkey -v
 export KEYTIMEOUT=1
 
-# Use the Starship prompt
-eval "$(starship init zsh)"
+# Use the Starship prompt if installed
+if command -v starship &> /dev/null; then
+    eval "$(starship init zsh)"
+fi
